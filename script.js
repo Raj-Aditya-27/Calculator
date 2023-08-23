@@ -121,7 +121,7 @@ function solvePostfix(value) {
 }
 
 keys.addEventListener('click', function (event) {
-    if (event.target.id != '=' && event.target.id != 'AC' && event.target.id != 'DEL') {
+    if (event.target.id != '=' && event.target.id != 'AC' && event.target.id != 'DEL' && event.target.id !='keys') {
         const pressedKeyId = event.target.id;
         content += pressedKeyId;
     }
@@ -132,7 +132,7 @@ keys.addEventListener('click', function (event) {
         content += "";
         content = content.slice(0, -1);
     }
-    else {
+    else if(event.target.id=='=') {
         let digit="";
         let size=content.length;
 
